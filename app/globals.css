@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.clip-path-polygon {
+  clip-path: polygon(0 0, 75% 0, 75% 25%, 100% 50%, 75% 75%, 75% 100%, 0 100%);
+}
