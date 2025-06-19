@@ -51,7 +51,7 @@ export function Skills() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
       {skillCategories.map((category, index) => (
-        <Card key={index} className="h-full">
+        <Card key={index} className="h-full rounded-xl">
           <CardHeader>
             <CardTitle className="text-lg sm:text-xl">
               {category.category}
@@ -62,7 +62,7 @@ export function Skills() {
               {category.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-secondary text-secondary-foreground text-xs sm:text-sm transition-colors hover:bg-secondary/80"
+                  className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs sm:text-sm transition-colors hover:bg-secondary/80"
                 >
                   {skill}
                 </span>

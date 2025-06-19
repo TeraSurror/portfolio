@@ -26,7 +26,7 @@ export function Contact() {
   ];
 
   return (
-    <Card className="max-w-3xl mx-auto">
+    <Card className="max-w-3xl mx-auto rounded-xl">
       <CardHeader>
         <CardTitle className="text-xl sm:text-2xl">
           Let&apos;s Connect

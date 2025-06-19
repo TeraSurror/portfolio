@@ -22,7 +22,7 @@ export function Education() {
 
   return (
     <div className="space-y-6">
-      <Card>
+      <Card className="rounded-xl">
         <CardHeader>
           <CardTitle className="text-xl sm:text-2xl">Education</CardTitle>
         </CardHeader>

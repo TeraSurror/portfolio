@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function About() {
   return (
-    <Card className="max-w-3xl mx-auto">
+    <Card className="max-w-3xl mx-auto rounded-xl">
       <CardHeader>
         <CardTitle className="text-xl sm:text-2xl">About Me</CardTitle>
       </CardHeader>

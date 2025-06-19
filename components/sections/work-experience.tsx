@@ -31,7 +31,7 @@ export function WorkExperience() {
 
   return (
     <div className="space-y-6">
-      <Card>
+      <Card className="rounded-xl">
         <CardHeader>
           <CardTitle>Work Experience</CardTitle>
         </CardHeader>
