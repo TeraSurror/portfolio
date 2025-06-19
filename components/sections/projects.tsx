@@ -21,7 +21,7 @@ export function Projects() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
       {projects.map((project, index) => (
-        <Card key={index} className="group hover:shadow-lg transition-shadow">
+        <Card key={index} className="group">
           <CardHeader className="space-y-2">
             <CardTitle className="text-xl">
               <div className="flex items-center justify-between gap-2">
@@ -30,7 +30,7 @@ export function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-primary shrink-0"
+                  className="text-sm text-muted-foreground hover:text-primary shrink-0 transition-colors"
                 >
                   View →
                 </a>
@@ -45,7 +45,7 @@ export function Projects() {
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-sm"
+                  className="px-2 py-1 bg-secondary text-secondary-foreground text-sm"
                 >
                   {tech}
                 </span>

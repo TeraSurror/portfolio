@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${ubuntu.className} dark antialiased`}>
         <div className="flex justify-center">
-          <div className="w-10/12 p-16">{children}</div>
+          <div className="w-10/12 sm:p-8 md:p-8">{children}</div>
         </div>
       </body>
     </html>

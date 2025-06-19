@@ -9,37 +9,63 @@ import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 sm:py-6">
       <H1 text="Harsh Shelar" className="text-2xl sm:text-3xl lg:text-4xl" />
-      <p className="text-base sm:text-lg text-muted-foreground mt-2 mb-6 sm:mb-8">
+      <p className="text-base sm:text-lg text-muted-foreground mt-2 mb-4 sm:mb-6">
         Welcome to my digital space
       </p>
       <Tabs defaultValue="about" className="w-full">
-        <TabsList className="w-full flex flex-wrap gap-2 justify-start">
-          <TabsTrigger value="about">About</TabsTrigger>
-          <TabsTrigger value="experience">Experience</TabsTrigger>
-          <TabsTrigger value="projects">Projects</TabsTrigger>
-          <TabsTrigger value="education">Education</TabsTrigger>
-          <TabsTrigger value="skills">Skills</TabsTrigger>
-          <TabsTrigger value="contact">Contact</TabsTrigger>
-        </TabsList>
-        <div className="mt-6 sm:mt-8">
-          <TabsContent value="about">
+        <div className="border rounded-lg p-1.5 sm:p-2 mb-4 sm:mb-6 overflow-x-auto shadow-sm">
+          <TabsList className="w-full flex min-w-max sm:min-w-0 gap-0.5 sm:gap-1">
+            <TabsTrigger
+              className="px-3 sm:px-4 hover:bg-secondary/80"
+              value="about"
+            >
+              About
+            </TabsTrigger>
+            <TabsTrigger
+              className="px-3 sm:px-4 hover:bg-secondary/80"
+              value="experience"
+            >
+              Experience
+            </TabsTrigger>
+            <TabsTrigger
+              className="px-3 sm:px-4 hover:bg-secondary/80"
+              value="projects"
+            >
+              Projects
+            </TabsTrigger>
+            <TabsTrigger className="px-3 sm:px-4" value="education">
+              Education
+            </TabsTrigger>
+            <TabsTrigger className="px-3 sm:px-4" value="skills">
+              Skills
+            </TabsTrigger>
+            <TabsTrigger className="px-3 sm:px-4" value="contact">
+              Contact
+            </TabsTrigger>
+          </TabsList>
+        </div>
+        <div className="mt-4">
+          <TabsContent value="about" className="focus-visible:outline-none">
             <About />
           </TabsContent>
-          <TabsContent value="experience">
+          <TabsContent
+            value="experience"
+            className="focus-visible:outline-none"
+          >
             <WorkExperience />
           </TabsContent>
-          <TabsContent value="projects">
+          <TabsContent value="projects" className="focus-visible:outline-none">
             <Projects />
           </TabsContent>
-          <TabsContent value="education">
+          <TabsContent value="education" className="focus-visible:outline-none">
             <Education />
           </TabsContent>
-          <TabsContent value="skills">
+          <TabsContent value="skills" className="focus-visible:outline-none">
             <Skills />
           </TabsContent>
-          <TabsContent value="contact">
+          <TabsContent value="contact" className="focus-visible:outline-none">
             <Contact />
           </TabsContent>
         </div>
