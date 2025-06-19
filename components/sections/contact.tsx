@@ -5,23 +5,23 @@ export function Contact() {
   const contactMethods = [
     {
       title: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "harshshelar22@gmail.com",
+      href: "mailto:harshshelar22@gmail.com",
     },
     {
       title: "GitHub",
-      value: "github.com/yourusername",
-      href: "https://github.com/yourusername",
+      value: "github.com/TeraSurror",
+      href: "https://github.com/TeraSurror",
     },
     {
       title: "LinkedIn",
-      value: "linkedin.com/in/yourusername",
-      href: "https://linkedin.com/in/yourusername",
+      value: "linkedin.com/in/harsh-shelar",
+      href: "https://linkedin.com/in/harsh-shelar",
     },
     {
-      title: "Twitter",
-      value: "@yourusername",
-      href: "https://twitter.com/yourusername",
+      title: "Instagram",
+      value: "@harshshelar22",
+      href: "https://www.instagram.com/harsh_shelar/",
     },
   ];
 

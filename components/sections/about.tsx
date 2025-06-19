@@ -18,13 +18,13 @@ export function About() {
           <div className="space-y-2">
             <h3 className="text-sm sm:text-base font-medium">Location</h3>
             <p className="text-sm sm:text-base text-muted-foreground">
-              Your Location
+              New York, USA
             </p>
           </div>
           <div className="space-y-2">
             <h3 className="text-sm sm:text-base font-medium">Languages</h3>
             <p className="text-sm sm:text-base text-muted-foreground">
-              English, Your Other Languages
+              English, Marathi, Hindi
             </p>
           </div>
         </div>

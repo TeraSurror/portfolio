@@ -3,13 +3,30 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export function WorkExperience() {
   const experiences = [
     {
-      company: "Company Name",
-      position: "Position Title",
-      duration: "Jan 2023 - Present",
-      description: "Description of your role and achievements",
+      company: "Nomura",
+      position: "Software Engineer",
+      duration: "June 2025 - Present",
+      description:
+        "Building Infrastructure for the development team at Nomura.",
+      technologies: ["React", "Java", "Spring Boot", "MySQL"],
+    },
+    {
+      company:
+        "National Science Foundation - Center for Integrated Pest Management",
+      position: "Student Software Engineer",
+      duration: "March 2024 - May 2025",
+      description:
+        "Build LLM powered applications for researchers to analyze pest migration and possible impact.",
+      technologies: ["Python", "Django", "LangChain", "MongoDB", "Ollama"],
+    },
+    {
+      company: "Deutsche Bank",
+      position: "Software Engineer",
+      duration: "July 2021 - July 2023",
+      description:
+        "Build and maintain applications of the Profit and Loss team at Deutsche Bank.",
       technologies: ["React", "TypeScript", "Node.js"],
     },
-    // Add more experiences as needed
   ];
 
   return (

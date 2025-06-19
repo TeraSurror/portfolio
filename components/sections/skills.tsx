@@ -4,19 +4,47 @@ export function Skills() {
   const skillCategories = [
     {
       category: "Programming Languages",
-      skills: ["JavaScript", "TypeScript", "Python", "Java"],
+      skills: ["Java", "Python", "JavaScript", "TypeScript", "Go"],
     },
     {
       category: "Frontend Development",
-      skills: ["React", "Next.js", "HTML5", "CSS3", "Tailwind CSS"],
+      skills: ["React", "Next.js", "HTML5", "CSS", "Tailwind CSS"],
     },
     {
       category: "Backend Development",
-      skills: ["Node.js", "Express", "PostgreSQL", "MongoDB"],
+      skills: [
+        "Spring Boot",
+        "Node.js",
+        "Express",
+        "Oracle",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+      ],
     },
     {
-      category: "Tools & Technologies",
-      skills: ["Git", "Docker", "AWS", "VS Code", "Figma"],
+      category: "CI/CD & DevOps",
+      skills: [
+        "Git",
+        "Github actions",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Helm",
+        "Ansible",
+      ],
+    },
+    {
+      category: "Machine Learning and Artificial Intelligence",
+      skills: [
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "Numpy",
+        "Pandas",
+        "LangChain",
+        "Ollama",
+      ],
     },
   ];
 

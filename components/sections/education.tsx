@@ -3,13 +3,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export function Education() {
   const education = [
     {
-      degree: "Your Degree",
-      institution: "Your University",
-      duration: "2020 - 2024",
-      location: "Location",
-      description: "Relevant coursework and achievements",
+      degree: "Master of Computer Science",
+      institution: "North Carolina State University",
+      duration: "2023 - 2025",
+      location: "Raliegh, NC",
+      description:
+        "Relevant Coursework: Software Engineering, Cloud Computing, Neural Networks, Internet Protocols",
     },
-    // Add more education entries as needed
+    {
+      degree: "Bachelor of Technology in Information Technology",
+      institution: "Sardar Patel Institute of Technology",
+      duration: "2017 - 2021",
+      location: "Mumbai, Maharashtra, India",
+      description:
+        "Relevant Coursework: Data Structures and Algorithms, Database Management Systems, Operating Systems, Computer Networks",
+    },
   ];
 
   return (
