@@ -1,23 +1,22 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 export function WorkExperience() {
   const experiences = [
     {
       company: "Nomura",
-      logo: "/logos/nomura.png",
+      logo: "/logos/nomura.jpeg",
       position: "Software Engineer",
       duration: "June 2025 - Present",
       achievements: [
         "Built infrastructure for the development team at Nomura.",
-        "Improved CI/CD pipeline efficiency by 30%.",
-        "Mentored 3 junior engineers.",
       ],
       technologies: ["React", "Java", "Spring Boot", "MySQL"],
     },
     {
       company:
         "National Science Foundation - Center for Integrated Pest Management",
-      logo: "/logos/nsf-cipm.png",
+      logo: "/logos/nsf-cipm.jpeg",
       position: "Student Software Engineer",
       duration: "March 2024 - May 2025",
       achievements: [
@@ -29,7 +28,7 @@ export function WorkExperience() {
     },
     {
       company: "Deutsche Bank",
-      logo: "/logos/deutsche-bank.png",
+      logo: "/logos/deutsche-bank.jpeg",
       position: "Software Engineer",
       duration: "July 2021 - July 2023",
       achievements: [
@@ -53,8 +52,10 @@ export function WorkExperience() {
               key={index}
               className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-start"
             >
-              <img
+              <Image
                 src={experience.logo}
+                width={56}
+                height={56}
                 alt={experience.company + " logo"}
                 className="w-14 h-14 object-contain rounded-lg bg-white border"
               />

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Contact() {
   const contactMethods = [
@@ -7,25 +8,25 @@ export function Contact() {
       title: "Email",
       value: "harshshelar22@gmail.com",
       href: "mailto:harshshelar22@gmail.com",
-      logo: "/logos/email.png",
+      logo: "/logos/email.jpeg",
     },
     {
       title: "GitHub",
       value: "github.com/TeraSurror",
       href: "https://github.com/TeraSurror",
-      logo: "/logos/github.png",
+      logo: "/logos/github.jpeg",
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/harsh-shelar",
       href: "https://linkedin.com/in/harsh-shelar",
-      logo: "/logos/linkedin.png",
+      logo: "/logos/linkedin.jpeg",
     },
     {
       title: "Instagram",
       value: "@harshshelar22",
       href: "https://www.instagram.com/harsh_shelar/",
-      logo: "/logos/instagram.png",
+      logo: "/logos/instagram.jpeg",
     },
   ];
 
@@ -54,10 +55,12 @@ export function Contact() {
                 variant="outline"
                 className="w-full justify-start text-left h-auto py-3 px-4 flex items-center gap-3"
               >
-                <img
+                <Image
                   src={method.logo}
+                  width={24}
+                  height={24}
                   alt={method.title + " logo"}
-                  className="w-6 h-6 object-contain rounded bg-white border"
+                  className="w-6 h-6 object-contain rounded-lg bg-white border"
                 />
                 <div className="flex flex-col">
                   <div className="font-semibold text-sm sm:text-base">

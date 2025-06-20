@@ -1,11 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 export function Education() {
   const education = [
     {
       degree: "Master of Computer Science",
       institution: "North Carolina State University",
-      logo: "/logos/ncsu.png",
+      logo: "/logos/ncsu.jpeg",
       duration: "2023 - 2025",
       location: "Raliegh, NC",
       description:
@@ -14,7 +15,7 @@ export function Education() {
     {
       degree: "Bachelor of Technology in Information Technology",
       institution: "Sardar Patel Institute of Technology",
-      logo: "/logos/spit.png",
+      logo: "/logos/spit.jpeg",
       duration: "2017 - 2021",
       location: "Mumbai, Maharashtra, India",
       description:
@@ -34,8 +35,10 @@ export function Education() {
               key={index}
               className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-start"
             >
-              <img
+              <Image
                 src={edu.logo}
+                width={56}
+                height={56}
                 alt={edu.institution + " logo"}
                 className="w-14 h-14 object-contain rounded-lg bg-white border"
               />
