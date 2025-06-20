@@ -11,7 +11,7 @@ export function WorkExperience() {
       achievements: [
         "Built infrastructure for the development team at Nomura.",
       ],
-      technologies: ["React", "Java", "Spring Boot", "MySQL"],
+      technologies: ["React", "Java", "Spring Boot", "MySQL", "AWS"],
     },
     {
       company:
@@ -20,11 +20,19 @@ export function WorkExperience() {
       position: "Student Software Engineer",
       duration: "March 2024 - May 2025",
       achievements: [
-        "Built LLM powered applications for researchers to analyze pest migration and possible impact.",
-        "Integrated LangChain and Ollama for advanced data analysis.",
-        "Collaborated with cross-functional research teams.",
+        "Architected and implemented a scalable document processing system with Angular and MongoDB.",
+        "Developed RESTful APIs using Django and FastAPI, supporting LLM-powered question-answering capabilities.",
+        "Created robust Python-based web scraping tools using Selenium, automating research data collection.",
+        "Employed state-of-the-art open-source LLMs (Gemma 3) to synthesize information from research papers.",
       ],
-      technologies: ["Python", "Django", "LangChain", "MongoDB", "Ollama"],
+      technologies: [
+        "Python",
+        "Django",
+        "FastAPI",
+        "LangChain",
+        "MongoDB",
+        "Ollama",
+      ],
     },
     {
       company: "Deutsche Bank",
@@ -32,11 +40,23 @@ export function WorkExperience() {
       position: "Software Engineer",
       duration: "July 2021 - July 2023",
       achievements: [
-        "Built and maintained applications for the Profit and Loss team.",
-        "Migrated legacy systems to modern React/TypeScript stack.",
-        "Reduced bug rate by 25% through improved testing.",
+        "Built a dashboard to orchestrate PnL data, using React (Typescript) and Redux",
+        "Designed and implemented scalable Java (Spring Boot) microservices for financial data processing.",
+        "Developed and optimized RESTful APIs, improving security with JWT authentication and access control.",
+        "Built CI/CD pipelines with Jenkins and Kubernetes for automated deployments on Openshift Fabric.",
+        "Improved performance of Oracle PL/SQL procedures, reducing data processing time by 15%.",
+        "Produced robust unit tests using JUnit and Mockito to ensure high code quality and reliability.",
       ],
-      technologies: ["React", "TypeScript", "Node.js"],
+      technologies: [
+        "Java",
+        "React",
+        "TypeScript",
+        "Spring Boot",
+        "Oracle",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+      ],
     },
   ];
 
@@ -71,14 +91,14 @@ export function WorkExperience() {
                 <p className="text-base sm:text-lg text-muted-foreground">
                   {experience.company}
                 </p>
-                <ul className="list-disc pl-5 space-y-1">
+                <ul className="mt-4 list-disc pl-5 space-y-1">
                   {experience.achievements.map((item, i) => (
                     <li key={i} className="text-sm sm:text-base">
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="mt-2 flex flex-wrap gap-2">
+                <div className="mt-8 flex flex-wrap gap-2">
                   {experience.technologies.map((tech) => (
                     <span
                       key={tech}
