@@ -9,7 +9,7 @@ import {
 export function Projects() {
   const projects = [
     {
-      title: "FitFiction - A Stress Detection Platform",
+      title: "FitFiction",
       description:
         "FitFiction is a digital health platform that provides stress level predictions, personalized health recommendations, and an interactive chat interface powered by the LLaMA model trained on health data.",
       technologies: ["LangChain", "Python", "React", "Flask"],
@@ -43,22 +43,25 @@ export function Projects() {
   return (
     <div className="space-y-4">
       {projects.map((project, index) => (
-        <Card key={index} className="group rounded-xl">
+        <Card key={index} className="group rounded-xl w-full max-w-full">
           <CardHeader className="space-y-2">
-            <CardTitle className="text-xl">
-              <div className="flex items-center justify-between gap-2">
-                <span className="truncate">{project.title}</span>
+            <CardTitle className="text-xl w-full max-w-full break-words">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 w-full max-w-full">
+                <span className="truncate w-full max-w-full break-words">
+                  {project.title}
+                </span>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-primary shrink-0 transition-colors"
+                  className="text-sm text-muted-foreground hover:text-primary shrink-0 transition-colors break-all"
+                  style={{ wordBreak: "break-all" }}
                 >
                   View Project →
                 </a>
               </div>
             </CardTitle>
-            <CardDescription className="line-clamp-none sm:line-clamp-2 max-w-3xl">
+            <CardDescription className="sm:line-clamp-2 max-w-full break-words">
               {project.description}
             </CardDescription>
           </CardHeader>

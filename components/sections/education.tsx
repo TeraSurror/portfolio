@@ -5,6 +5,7 @@ export function Education() {
     {
       degree: "Master of Computer Science",
       institution: "North Carolina State University",
+      logo: "/logos/ncsu.png",
       duration: "2023 - 2025",
       location: "Raliegh, NC",
       description:
@@ -13,6 +14,7 @@ export function Education() {
     {
       degree: "Bachelor of Technology in Information Technology",
       institution: "Sardar Patel Institute of Technology",
+      logo: "/logos/spit.png",
       duration: "2017 - 2021",
       location: "Mumbai, Maharashtra, India",
       description:
@@ -28,8 +30,16 @@ export function Education() {
         </CardHeader>
         <CardContent className="space-y-6">
           {education.map((edu, index) => (
-            <div key={index} className="border-b last:border-0 pb-6 last:pb-0">
-              <div className="space-y-2">
+            <div
+              key={index}
+              className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-start"
+            >
+              <img
+                src={edu.logo}
+                alt={edu.institution + " logo"}
+                className="w-14 h-14 object-contain rounded-lg bg-white border"
+              />
+              <div className="flex-1 space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                   <h3 className="text-lg sm:text-xl font-semibold">
                     {edu.degree}
@@ -39,7 +49,9 @@ export function Education() {
                   </span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-muted-foreground">
-                  <span className="text-base">{edu.institution}</span>
+                  <span className="text-base flex items-center gap-2">
+                    {edu.institution}
+                  </span>
                   <span className="hidden sm:inline">•</span>
                   <span className="text-sm">{edu.location}</span>
                 </div>

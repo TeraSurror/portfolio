@@ -7,21 +7,25 @@ export function Contact() {
       title: "Email",
       value: "harshshelar22@gmail.com",
       href: "mailto:harshshelar22@gmail.com",
+      logo: "/logos/email.png",
     },
     {
       title: "GitHub",
       value: "github.com/TeraSurror",
       href: "https://github.com/TeraSurror",
+      logo: "/logos/github.png",
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/harsh-shelar",
       href: "https://linkedin.com/in/harsh-shelar",
+      logo: "/logos/linkedin.png",
     },
     {
       title: "Instagram",
       value: "@harshshelar22",
       href: "https://www.instagram.com/harsh_shelar/",
+      logo: "/logos/instagram.png",
     },
   ];
 
@@ -48,8 +52,13 @@ export function Contact() {
             >
               <Button
                 variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4"
+                className="w-full justify-start text-left h-auto py-3 px-4 flex items-center gap-3"
               >
+                <img
+                  src={method.logo}
+                  alt={method.title + " logo"}
+                  className="w-6 h-6 object-contain rounded bg-white border"
+                />
                 <div className="flex flex-col">
                   <div className="font-semibold text-sm sm:text-base">
                     {method.title}
