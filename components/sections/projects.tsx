@@ -11,14 +11,15 @@ export function Projects() {
     {
       title: "FitFiction",
       description:
-        "FitFiction is a digital health platform that provides stress level predictions, personalized health recommendations, and an interactive chat interface powered by the LLaMA model trained on health data.",
+        "FitFiction is a digital health platform that provides stress level predictions, personalized health recommendations, and an interactive chat interface powered by the LLaMA model trained on health data. 🏆 at Hack_NCState.",
       technologies: ["LangChain", "Python", "React", "Flask"],
       link: "https://github.com/TeraSurror/stress-detection",
       image: "/project-image.png",
     },
     {
       title: "Hecate",
-      description: "An interpreter written in Java.",
+      description:
+        "Crafted a dynamically typed programming language using Java, featuring functions, classes, and inheritance. Built an interpreter for the language, handling syntax parsing, semantic analysis, and code execution",
       technologies: ["Java"],
       link: "https://github.com/TeraSurror/Hecate",
       image: "/project-image.png",
@@ -26,14 +27,14 @@ export function Projects() {
     {
       title: "Static Site Generator",
       description:
-        "Python-based static site generator that converts Markdown content into HTML",
+        "Python-based static site generator that converts Markdown content into HTML.",
       technologies: ["Python", "Markdown"],
       link: "https://github.com/TeraSurror/static-site-generator",
       image: "/project-image.png",
     },
     {
       title: "Frogger 3D",
-      description: "3D version of the game frogger implemented in WebGL",
+      description: "3D version of the game frogger implemented in WebGL.",
       technologies: ["JavaScript", "WebGL"],
       link: "https://github.com/TeraSurror/frogger",
       image: "/project-image.png",
