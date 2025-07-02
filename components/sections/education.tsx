@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 export function Education() {
@@ -25,22 +25,22 @@ export function Education() {
 
   return (
     <div className="space-y-6">
-      <Card className="rounded-xl">
-        <CardHeader>
-          <CardTitle className="text-xl sm:text-2xl">Education</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          {education.map((edu, index) => (
+      {education.map((edu, index) => (
+        <Card key={index} className="group rounded-xl">
+          {/* <CardHeader>
+            <CardTitle className="text-xl sm:text-2xl">Education</CardTitle>
+          </CardHeader> */}
+          <CardContent className="space-y-6">
             <div
               key={index}
-              className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-start"
+              className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-center"
             >
               <Image
                 src={edu.logo}
                 width={56}
                 height={56}
                 alt={edu.institution + " logo"}
-                className="w-14 h-14 object-contain rounded-lg bg-white border"
+                className="w-14 h-14 mx-4 object-contain rounded-lg bg-white border"
               />
               <div className="flex-1 space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
@@ -61,9 +61,9 @@ export function Education() {
                 <p className="text-sm sm:text-base">{edu.description}</p>
               </div>
             </div>
-          ))}
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 }

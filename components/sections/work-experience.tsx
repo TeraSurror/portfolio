@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
 export function WorkExperience() {
@@ -62,12 +62,9 @@ export function WorkExperience() {
 
   return (
     <div className="space-y-6">
-      <Card className="rounded-xl">
-        <CardHeader>
-          <CardTitle>Work Experience</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          {experiences.map((experience, index) => (
+      {experiences.map((experience, index) => (
+        <Card key={index} className="rounded-xl">
+          <CardContent className="space-y-6">
             <div
               key={index}
               className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-start"
@@ -77,7 +74,7 @@ export function WorkExperience() {
                 width={56}
                 height={56}
                 alt={experience.company + " logo"}
-                className="w-14 h-14 object-contain rounded-lg bg-white border"
+                className="mr-4 w-14 h-14 object-contain rounded-lg bg-white border"
               />
               <div className="flex-1 space-y-2">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
@@ -110,9 +107,9 @@ export function WorkExperience() {
                 </div>
               </div>
             </div>
-          ))}
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 }
