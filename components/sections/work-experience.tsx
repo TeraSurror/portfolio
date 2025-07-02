@@ -9,7 +9,7 @@ export function WorkExperience() {
       position: "Software Engineer",
       duration: "June 2025 - Present",
       achievements: [
-        "Built infrastructure for the development team at Nomura.",
+        "Utilized LLMs to automate documentation generation for the codebase of the entire company.",
       ],
       technologies: ["React", "Java", "Spring Boot", "MySQL", "AWS"],
     },
