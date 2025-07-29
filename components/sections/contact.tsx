@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export function Contact() {
@@ -9,72 +7,72 @@ export function Contact() {
       value: "harshshelar22@gmail.com",
       href: "mailto:harshshelar22@gmail.com",
       logo: "/logos/email.jpeg",
+      emoji: "📧",
     },
     {
       title: "GitHub",
       value: "github.com/TeraSurror",
       href: "https://github.com/TeraSurror",
       logo: "/logos/github.jpeg",
+      emoji: "🐙",
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/harsh-shelar",
       href: "https://linkedin.com/in/harsh-shelar",
       logo: "/logos/linkedin.jpeg",
+      emoji: "💼",
     },
     {
       title: "Instagram",
       value: "@harshshelar22",
       href: "https://www.instagram.com/harsh_shelar/",
       logo: "/logos/instagram.jpeg",
+      emoji: "📸",
     },
   ];
 
   return (
-    <Card className="p-4 max-w-3xl mx-auto rounded-xl">
-      <CardHeader>
-        <CardTitle className="text-xl sm:text-2xl">
-          Let&apos;s Connect
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-6">
-        <p className="text-sm sm:text-base text-muted-foreground">
+    <div className="space-y-6">
+      {/* Notion-style text block */}
+      <div className="notion-block p-3 -mx-3">
+        <p className="text-base leading-relaxed text-foreground">
           I&apos;m always open to new opportunities and collaborations. Feel
           free to reach out!
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          {contactMethods.map((method) => (
-            <a
-              key={method.title}
-              href={method.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="no-underline"
-            >
-              <Button
-                variant="outline"
-                className="w-full justify-start text-left h-auto py-3 px-4 flex items-center gap-3"
-              >
-                <Image
-                  src={method.logo}
-                  width={24}
-                  height={24}
-                  alt={method.title + " logo"}
-                  className="w-6 h-6 object-contain rounded-lg bg-white border"
-                />
-                <div className="flex flex-col">
-                  <div className="font-semibold text-sm sm:text-base">
+      </div>
+
+      {/* Contact methods as Notion-style blocks */}
+      <div className="space-y-2">
+        {contactMethods.map((method) => (
+          <a
+            key={method.title}
+            href={method.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block notion-block p-3 -mx-3 transition-all duration-150 hover:bg-accent/30 rounded-md group"
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-1">
+                <div className="w-8 h-8 bg-accent/30 rounded-lg flex items-center justify-center text-sm">
+                  {method.emoji}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-medium text-foreground text-sm">
                     {method.title}
                   </div>
-                  <div className="text-xs sm:text-sm text-muted-foreground truncate">
+                  <div className="text-xs text-muted-foreground truncate">
                     {method.value}
                   </div>
                 </div>
-              </Button>
-            </a>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+              </div>
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-xs text-muted-foreground">→</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
   );
 }

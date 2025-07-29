@@ -4,14 +4,17 @@ export function Skills() {
   const skillCategories = [
     {
       category: "Programming Languages",
+      emoji: "💻",
       skills: ["Java", "Python", "JavaScript", "TypeScript", "Go"],
     },
     {
       category: "Frontend Development",
+      emoji: "🎨",
       skills: ["React", "Next.js", "HTML5", "CSS", "Tailwind CSS"],
     },
     {
       category: "Backend Development",
+      emoji: "⚙️",
       skills: [
         "Spring Boot",
         "Node.js",
@@ -24,6 +27,7 @@ export function Skills() {
     },
     {
       category: "CI/CD & DevOps",
+      emoji: "🚀",
       skills: [
         "Git",
         "Github actions",
@@ -36,6 +40,7 @@ export function Skills() {
     },
     {
       category: "Machine Learning and Artificial Intelligence",
+      emoji: "🤖",
       skills: [
         "PyTorch",
         "TensorFlow",
@@ -49,20 +54,21 @@ export function Skills() {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
       {skillCategories.map((category, index) => (
-        <Card key={index} className="h-full rounded-xl">
+        <Card key={index} className="h-full">
           <CardHeader>
-            <CardTitle className="text-lg sm:text-xl">
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <span>{category.emoji}</span>
               {category.category}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {category.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-xs sm:text-sm transition-colors hover:bg-secondary/80"
+                  className="notion-tag"
                 >
                   {skill}
                 </span>

@@ -1,4 +1,3 @@
-import { H1 } from "@/components/typography/typography";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { About } from "@/components/sections/about";
 import { WorkExperience } from "@/components/sections/work-experience";
@@ -9,63 +8,82 @@ import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 py-3 sm:py-6">
-      <H1 text="Harsh Shelar" className="text-2xl sm:text-3xl lg:text-4xl" />
-      <p className="text-base sm:text-lg text-muted-foreground mt-2 mb-4 sm:mb-6">
-        Welcome to my digital space
-      </p>
+    <div className="py-8 sm:py-12 notion-page-enter">
+      {/* Notion-style page header */}
+      <div className="mb-8 sm:mb-12">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+          <span>🏠</span>
+          <span>Portfolio</span>
+        </div>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 tracking-tight">
+          Harsh Shelar
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          Welcome to my digital space
+        </p>
+      </div>
+
+      {/* Notion-style navigation tabs */}
       <Tabs defaultValue="about" className="w-full">
-        <div className="border rounded-lg p-1.5 sm:p-2 mb-4 sm:mb-6 overflow-x-auto shadow-sm">
-          <TabsList className="w-full flex min-w-max sm:min-w-0 gap-0.5 sm:gap-1">
+        <div className="mb-8">
+          <TabsList className="bg-transparent p-0 h-auto gap-1">
             <TabsTrigger
-              className="px-3 sm:px-4 hover:bg-secondary/80"
               value="about"
+              className="notion-block px-3 py-2 data-[state=active]:bg-accent data-[state=active]:text-foreground"
             >
-              About
+              📋 About
             </TabsTrigger>
             <TabsTrigger
-              className="px-3 sm:px-4 hover:bg-secondary/80"
               value="experience"
+              className="notion-block px-3 py-2 data-[state=active]:bg-accent data-[state=active]:text-foreground"
             >
-              Experience
+              💼 Experience
             </TabsTrigger>
             <TabsTrigger
-              className="px-3 sm:px-4 hover:bg-secondary/80"
               value="projects"
+              className="notion-block px-3 py-2 data-[state=active]:bg-accent data-[state=active]:text-foreground"
             >
-              Projects
+              🚀 Projects
             </TabsTrigger>
-            <TabsTrigger className="px-3 sm:px-4" value="education">
-              Education
+            <TabsTrigger
+              value="education"
+              className="notion-block px-3 py-2 data-[state=active]:bg-accent data-[state=active]:text-foreground"
+            >
+              🎓 Education
             </TabsTrigger>
-            <TabsTrigger className="px-3 sm:px-4" value="skills">
-              Skills
+            <TabsTrigger
+              value="skills"
+              className="notion-block px-3 py-2 data-[state=active]:bg-accent data-[state=active]:text-foreground"
+            >
+              ⚡ Skills
             </TabsTrigger>
-            <TabsTrigger className="px-3 sm:px-4" value="contact">
-              Contact
+            <TabsTrigger
+              value="contact"
+              className="notion-block px-3 py-2 data-[state=active]:bg-accent data-[state=active]:text-foreground"
+            >
+              📞 Contact
             </TabsTrigger>
           </TabsList>
         </div>
-        <div className="mt-4">
-          <TabsContent value="about" className="focus-visible:outline-none">
+
+        {/* Content sections */}
+        <div className="space-y-6">
+          <TabsContent value="about" className="focus-visible:outline-none mt-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <About />
           </TabsContent>
-          <TabsContent
-            value="experience"
-            className="focus-visible:outline-none"
-          >
+          <TabsContent value="experience" className="focus-visible:outline-none mt-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <WorkExperience />
           </TabsContent>
-          <TabsContent value="projects" className="focus-visible:outline-none">
+          <TabsContent value="projects" className="focus-visible:outline-none mt-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <Projects />
           </TabsContent>
-          <TabsContent value="education" className="focus-visible:outline-none">
+          <TabsContent value="education" className="focus-visible:outline-none mt-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <Education />
           </TabsContent>
-          <TabsContent value="skills" className="focus-visible:outline-none">
+          <TabsContent value="skills" className="focus-visible:outline-none mt-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <Skills />
           </TabsContent>
-          <TabsContent value="contact" className="focus-visible:outline-none">
+          <TabsContent value="contact" className="focus-visible:outline-none mt-0 animate-in fade-in-0 slide-in-from-bottom-2 duration-300">
             <Contact />
           </TabsContent>
         </div>

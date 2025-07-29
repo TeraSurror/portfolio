@@ -61,45 +61,51 @@ export function WorkExperience() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {experiences.map((experience, index) => (
-        <Card key={index} className="rounded-xl">
-          <CardContent className="space-y-6">
-            <div
-              key={index}
-              className="border-b last:border-0 pb-6 last:pb-0 flex flex-col sm:flex-row gap-4 items-start"
-            >
-              <Image
-                src={experience.logo}
-                width={56}
-                height={56}
-                alt={experience.company + " logo"}
-                className="mr-4 w-14 h-14 object-contain rounded-lg bg-white border"
-              />
-              <div className="flex-1 space-y-2">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <h3 className="text-lg sm:text-xl font-semibold">
-                    {experience.position}
-                  </h3>
-                  <span className="text-sm text-muted-foreground shrink-0">
+        <Card key={index}>
+          <CardContent className="p-6">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <div className="flex-shrink-0">
+                <Image
+                  src={experience.logo}
+                  width={48}
+                  height={48}
+                  alt={experience.company + " logo"}
+                  className="w-12 h-12 object-contain rounded-lg bg-white/10 border border-border p-1"
+                />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-2">
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground">
+                      {experience.position}
+                    </h3>
+                    <p className="text-base text-muted-foreground">
+                      {experience.company}
+                    </p>
+                  </div>
+                  <span className="text-sm text-muted-foreground shrink-0 bg-accent/30 px-2 py-1 rounded">
                     {experience.duration}
                   </span>
                 </div>
-                <p className="text-base sm:text-lg text-muted-foreground">
-                  {experience.company}
-                </p>
-                <ul className="mt-4 list-disc pl-5 space-y-1">
+                
+                <div className="space-y-2 mb-4">
                   {experience.achievements.map((item, i) => (
-                    <li key={i} className="text-sm sm:text-base">
-                      {item}
-                    </li>
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="text-muted-foreground mt-1.5 text-xs">•</span>
+                      <p className="text-sm text-foreground leading-relaxed">
+                        {item}
+                      </p>
+                    </div>
                   ))}
-                </ul>
-                <div className="mt-8 flex flex-wrap gap-2">
+                </div>
+                
+                <div className="flex flex-wrap gap-1.5">
                   {experience.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-secondary text-secondary-foreground rounded-md text-xs sm:text-sm"
+                      className="notion-tag"
                     >
                       {tech}
                     </span>
