@@ -1,35 +1,35 @@
 export function About() {
   return (
-    <div className="space-y-6">
-      {/* Notion-style text block */}
-      <div className="notion-block p-3 -mx-3">
-        <p className="text-base leading-relaxed text-foreground">
-          Hi! I&apos;m a passionate software developer with a love for creating
-          elegant solutions to complex problems. With a strong foundation in
-          modern web technologies and a keen eye for detail, I strive to build
-          applications that are not just functional, but also intuitive and
-          user-friendly.
+    <div className="space-y-4">
+      <div className="ide-code-block">
+        <p className="text-sm leading-relaxed text-foreground">
+          <span className="text-[#569cd6]">const</span>{" "}
+          <span className="text-[#4ec9b0]">about</span> = {"{"}
         </p>
-      </div>
-
-      {/* Notion-style callout block */}
-      <div className="notion-callout">
-        <div className="flex items-start gap-3">
-          <span className="text-lg">💡</span>
-          <div className="flex-1">
-            <p className="text-sm font-medium text-foreground mb-1">Quick Facts</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground">📍</span>
-                <span className="text-foreground">New York, USA</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground">🗣️</span>
-                <span className="text-foreground">English, Marathi, Hindi</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <p className="text-sm leading-relaxed text-foreground ml-4">
+          <span className="text-[#9cdcfe]">name</span>:{" "}
+          <span className="text-[#ce9178]">&apos;Harsh Shelar&apos;</span>,
+        </p>
+        <p className="text-sm leading-relaxed text-foreground ml-4">
+          <span className="text-[#9cdcfe]">description</span>:{" "}
+          <span className="text-[#ce9178]">
+            &apos;Passionate software developer with a love for creating elegant
+            solutions to complex problems&apos;
+          </span>
+          ,
+        </p>
+        <p className="text-sm leading-relaxed text-foreground ml-4">
+          <span className="text-[#9cdcfe]">location</span>:{" "}
+          <span className="text-[#ce9178]">&apos;New York, USA&apos;</span>,
+        </p>
+        <p className="text-sm leading-relaxed text-foreground ml-4">
+          <span className="text-[#9cdcfe]">languages</span>: [
+          <span className="text-[#ce9178]">
+            &apos;English&apos;, &apos;Marathi&apos;, &apos;Hindi&apos;
+          </span>
+          ],
+        </p>
+        <p className="text-sm leading-relaxed text-foreground">{"}"};</p>
       </div>
     </div>
   );

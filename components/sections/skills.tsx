@@ -68,7 +68,7 @@ export function Skills() {
               {category.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="notion-tag"
+                  className="ide-tag"
                 >
                   {skill}
                 </span>
