@@ -34,12 +34,12 @@ export function Contact() {
     <div className="space-y-4">
       <div className="ide-code-block">
         <p className="text-sm leading-relaxed text-foreground">
-          <span className="text-[#569cd6]">const</span>{" "}
-          <span className="text-[#4ec9b0]">contact</span> = {"{"}
+          <span className="text-[var(--syntax-keyword)]">const</span>{" "}
+          <span className="text-[var(--syntax-type)]">contact</span> = {"{"}
         </p>
         <p className="text-sm leading-relaxed text-foreground ml-4">
-          <span className="text-[#9cdcfe]">message</span>:{" "}
-          <span className="text-[#ce9178]">
+          <span className="text-[var(--syntax-property)]">message</span>:{" "}
+          <span className="text-[var(--syntax-string)]">
             &apos;Always open to new opportunities and collaborations&apos;
           </span>
           ,

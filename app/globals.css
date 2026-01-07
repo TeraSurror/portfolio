@@ -46,7 +46,7 @@
 
 :root {
   --radius: 0.375rem;
-  /* Cursor IDE Dark Theme Color Palette */
+  /* VS Code Dark Theme Color Palette */
   --background: #1e1e1e;
   --foreground: #cccccc;
   --card: #252526;
@@ -66,7 +66,7 @@
   --border: #3e3e42;
   --input: #3c3c3c;
   --ring: #007acc;
-  /* Cursor IDE specific colors */
+  /* IDE specific colors */
   --sidebar-bg: #252526;
   --sidebar-hover: #2a2d2e;
   --activity-bar: #333337;
@@ -77,6 +77,14 @@
   --tab-border: #007acc;
   --status-bar: #007acc;
   --status-bar-text: #ffffff;
+  /* Syntax Highlighting - VS Code Style */
+  --syntax-keyword: #569cd6;
+  --syntax-type: #4ec9b0;
+  --syntax-property: #9cdcfe;
+  --syntax-string: #ce9178;
+  --syntax-number: #b5cea8;
+  --syntax-comment: #6a9955;
+  --syntax-bracket: #ffd700;
 }
 
 .dark {
