@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "Harsh Shelar - Portfolio",
@@ -19,10 +13,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} font-sans dark antialiased`}>
-        <div className="min-h-screen bg-background">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <body className="dark antialiased">
+        <div className="h-screen flex flex-col overflow-hidden bg-background">
+          <div className="flex-1 flex overflow-hidden">
             {children}
+          </div>
+          {/* Status Bar */}
+          <div className="ide-status-bar flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span>Ln 1, Col 1</span>
+              <span>Spaces: 2</span>
+              <span>UTF-8</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <span>TypeScript React</span>
+              <span>Portfolio</span>
+            </div>
           </div>
         </div>
       </body>

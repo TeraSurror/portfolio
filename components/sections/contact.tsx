@@ -31,16 +31,23 @@ export function Contact() {
   ];
 
   return (
-    <div className="space-y-6">
-      {/* Notion-style text block */}
-      <div className="notion-block p-3 -mx-3">
-        <p className="text-base leading-relaxed text-foreground">
-          I&apos;m always open to new opportunities and collaborations. Feel
-          free to reach out!
+    <div className="space-y-4">
+      <div className="ide-code-block">
+        <p className="text-sm leading-relaxed text-foreground">
+          <span className="text-[var(--syntax-keyword)]">const</span>{" "}
+          <span className="text-[var(--syntax-type)]">contact</span> = {"{"}
         </p>
+        <p className="text-sm leading-relaxed text-foreground ml-4">
+          <span className="text-[var(--syntax-property)]">message</span>:{" "}
+          <span className="text-[var(--syntax-string)]">
+            &apos;Always open to new opportunities and collaborations&apos;
+          </span>
+          ,
+        </p>
+        <p className="text-sm leading-relaxed text-foreground">{"}"};</p>
       </div>
 
-      {/* Contact methods as Notion-style blocks */}
+      {/* Contact methods */}
       <div className="space-y-2">
         {contactMethods.map((method) => (
           <a
@@ -48,20 +55,16 @@ export function Contact() {
             href={method.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="block notion-block p-3 -mx-3 transition-all duration-150 hover:bg-accent/30 rounded-md group"
+            className="block ide-code-block hover:bg-accent/20 transition-colors group"
           >
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-3 flex-1">
-                <div className="w-8 h-8 bg-accent/30 rounded-lg flex items-center justify-center text-sm">
-                  {method.emoji}
+              <span className="text-lg">{method.emoji}</span>
+              <div className="flex-1 min-w-0">
+                <div className="font-medium text-foreground text-sm">
+                  {method.title}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="font-medium text-foreground text-sm">
-                    {method.title}
-                  </div>
-                  <div className="text-xs text-muted-foreground truncate">
-                    {method.value}
-                  </div>
+                <div className="text-xs text-muted-foreground truncate font-mono">
+                  {method.value}
                 </div>
               </div>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity">

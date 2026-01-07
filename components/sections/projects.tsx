@@ -67,7 +67,7 @@ export function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="notion-tag"
+                      className="ide-tag"
                     >
                       {tech}
                     </span>
