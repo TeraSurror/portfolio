@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Contact() {
   const contactMethods = [
     {
@@ -5,28 +7,24 @@ export function Contact() {
       value: "harshshelar22@gmail.com",
       href: "mailto:harshshelar22@gmail.com",
       logo: "/logos/email.jpeg",
-      emoji: "📧",
     },
     {
       title: "GitHub",
       value: "github.com/TeraSurror",
       href: "https://github.com/TeraSurror",
       logo: "/logos/github.jpeg",
-      emoji: "🐙",
     },
     {
       title: "LinkedIn",
       value: "linkedin.com/in/harsh-shelar",
       href: "https://linkedin.com/in/harsh-shelar",
       logo: "/logos/linkedin.jpeg",
-      emoji: "💼",
     },
     {
       title: "Instagram",
       value: "@harshshelar22",
       href: "https://www.instagram.com/harsh_shelar/",
       logo: "/logos/instagram.jpeg",
-      emoji: "📸",
     },
   ];
 
@@ -58,7 +56,13 @@ export function Contact() {
             className="block ide-code-block hover:bg-accent/20 transition-colors group"
           >
             <div className="flex items-center gap-3">
-              <span className="text-lg">{method.emoji}</span>
+              <Image
+                src={method.logo}
+                width={24}
+                height={24}
+                alt={method.title + " logo"}
+                className="w-6 h-6 object-contain rounded"
+              />
               <div className="flex-1 min-w-0">
                 <div className="font-medium text-foreground text-sm">
                   {method.title}
